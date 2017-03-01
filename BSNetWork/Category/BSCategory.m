@@ -1,13 +1,13 @@
 //
-//  BSCategory.h
+//  BSCategory.m
 //  VIPER TODO
 //
 //  Created by 董富强 on 2017/3/1.
 //  Copyright © 2017年 Mutual Mobile. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BSCategory.h"
 
-@interface BSCategory : NSObject
+@implementation BSCategory
 
 @end

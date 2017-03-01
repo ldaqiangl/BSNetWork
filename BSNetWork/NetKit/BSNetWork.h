@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Mutual Mobile. All rights reserved.
 //
 
-#ifndef BSNetWork_h
-#define BSNetWork_h
+#import <Foundation/Foundation.h>
 
+@interface BSNetWork : NSObject
 
-#endif /* BSNetWork_h */
+@end

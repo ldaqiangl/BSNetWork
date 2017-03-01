@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/ldaqiangl/BSNetWork.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/ldaqiangl/BSNetWork.git", :tag => "#{s.version}" , :submodules => true }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,9 +91,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "BSNetWork", "BSNetWork/**/*"
+  s.source_files  = "BSNetWork", "BSNetWork/**/BSNetWork.h"
   # s.exclude_files = "BSNetWork/Exclude"
-  s.public_header_files = "BSNetWork/**/*"
+  s.public_header_files = "BSNetWork/**/BSNetWork.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -140,16 +140,16 @@ Pod::Spec.new do |s|
   # ――― NetKit ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
     s.subspec 'NetKit' do |netKit|
       
-      netKit.source_files = 'BSNetWork/NetKit/*'
-      netKit.public_header_files = 'BSNetWork/NetKit/*'
+      netKit.source_files = 'BSNetWork/NetKit/*.{h,m}'
+      netKit.public_header_files = 'BSNetWork/NetKit/*.h'
       netKit.dependency "AFNetworking"
     end
     
   # ――― Category ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
     s.subspec 'Category' do |category|
 
-      category.source_files = 'BSNetWork/Category/*'
-      category.public_header_files = 'BSNetWork/Category/*'
+      category.source_files = 'BSNetWork/Category/*.{h,m}'
+      category.public_header_files = 'BSNetWork/Category/*.h'
       category.dependency "MJRefresh"
       category.dependency 'DZNEmptyDataSet'
     end
