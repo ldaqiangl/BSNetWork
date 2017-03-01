@@ -148,8 +148,8 @@ Pod::Spec.new do |s|
   # ――― Category ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
     s.subspec 'Category' do |category|
 
-      category.source_files = 'BSNetWork/Category/**/*'
-      category.public_header_files = 'BSNetWork/Category/**/*'
+      category.source_files = 'BSNetWork/Category/*'
+      category.public_header_files = 'BSNetWork/Category/*'
       category.dependency "MJRefresh"
       category.dependency 'DZNEmptyDataSet'
     end
